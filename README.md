@@ -12,3 +12,6 @@ Run:
 
 The server serves files from current directory and port 3000. Firefox browser opens on 
 `http://localhost:3000`.
+
+
+Test it with vanilla WebComponents: [https://github.com/AdamBien/bce.design](https://github.com/AdamBien/bce.design)
