@@ -15,3 +15,8 @@ The server serves files from current directory and port 3000. Firefox browser op
 
 
 Test it with vanilla WebComponents: [https://github.com/AdamBien/bce.design](https://github.com/AdamBien/bce.design)
+
+# SaO.java in action
+
+
+[![Single File, Zero Installation, No Dependencies Java Web (Dev) Server](https://i.ytimg.com/vi/pkpaUHuT9Rg/mqdefault.jpg)](https://www.youtube.com/embed/pkpaUHuT9Rg?rel=0)
