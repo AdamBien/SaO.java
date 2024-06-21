@@ -24,8 +24,14 @@ public class SaO {
                 webServer.getAddress().getHostString(),
                 webServer.getAddress().getPort());
         LOG.log(Level.INFO, url);
-
-        Desktop.getDesktop().browse(URI.create(url));
+        Browser.open(url);
         LOG.log(Level.INFO, "browser opened ");
     }
 }
+
+interface Browser{
+    static void open(String uriString) throws IOException{
+        var uri = URI.create(uriString);
+            Desktop.getDesktop().browse(uri);
+        }
+    }
