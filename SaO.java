@@ -1,18 +1,20 @@
+import java.awt.Desktop;
 import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
+import java.net.URI;
 import java.nio.file.Path;
 
 import com.sun.net.httpserver.SimpleFileServer;
 import com.sun.net.httpserver.SimpleFileServer.OutputLevel;
 
-interface SaO {
+public class SaO {
 
-    Logger LOG = System.getLogger(SaO.class.getName());
+    private static Logger LOG = System.getLogger(SaO.class.getName());
 
-    static void main(String... args) throws IOException, InterruptedException {
+    public static void main(String... args) throws IOException, InterruptedException {
         var port = 3000;
         var loopback = new InetSocketAddress(InetAddress.getLoopbackAddress(), port);
         var path = Path.of(".").toAbsolutePath();
@@ -22,8 +24,8 @@ interface SaO {
                 webServer.getAddress().getHostString(),
                 webServer.getAddress().getPort());
         LOG.log(Level.INFO, url);
-        var browser = new ProcessBuilder("open", "-a","Firefox",url);
-        browser.start();
+
+        Desktop.getDesktop().browse(URI.create(url));
         LOG.log(Level.INFO, "browser opened ");
     }
 }
