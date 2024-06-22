@@ -3,8 +3,10 @@ Serve and Open (the browser). A zero-dependency development webserver
 
 # Installation
 
-1. You need: Java 11 or later.
-2. Clone this repository.
+1. You need: Java 21 or later.
+2. `curl -O  https://raw.githubusercontent.com/AdamBien/SaO.java/main/SaO.java` (or clone this repo)
+3. `java SaO.java`
+
 
 Run:
 
