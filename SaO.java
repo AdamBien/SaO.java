@@ -29,9 +29,30 @@ public class SaO {
     }
 }
 
-interface Browser{
-    static void open(String uriString) throws IOException{
+interface Browser {
+    static void open(String uriString) throws IOException {
         var uri = URI.create(uriString);
-            Desktop.getDesktop().browse(uri);
-        }
+        Desktop.getDesktop().browse(uri);
     }
+}
+
+enum OS {
+
+    MAC,LINUX,WINDOWS;
+
+    static OS detect() {
+        var os = System.getProperty("os.name")
+                .toLowerCase();
+        if (os.contains("mac")) {
+            return MAC;
+        }
+        if (os.contains("nix")) {
+            return LINUX;
+        }
+        if (os.contains("win")) {
+            return WINDOWS;
+        }
+        throw new IllegalArgumentException("Unknown OS: " + os);
+    }
+
+}
