@@ -1,16 +1,10 @@
 # SaO.java
 Serve and Open (the browser). A zero-dependency development webserver
 
-# Installation
+# Run
 
 1. You need: Java 21 or later.
-2. `curl -O  https://raw.githubusercontent.com/AdamBien/SaO.java/main/SaO.java` (or clone this repo)
-3. `java SaO.java`
-
-
-Run:
-
-`java SaO.java`
+2. `curl -O  https://raw.githubusercontent.com/AdamBien/SaO.java/main/SaO.java && java SaO.java` (or clone this repo)
 
 The server serves files from current directory and port 3000. Firefox browser opens on 
 `http://localhost:3000`.
